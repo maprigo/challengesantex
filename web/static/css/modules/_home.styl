@@ -1,0 +1,78 @@
+#home_index
+  text-align: center
+  min-width: 15em
+  color: #fff
+
+  header
+    padding: ($base-spacing * 2) 0
+
+  h1
+    font-size: 3em
+    line-height: 1.5em
+    color: $dark-purple
+
+  p
+    font-size: 1.5em
+    line-height: 1.5em
+    color: $light-purple
+
+  .current-games
+    list-style: none
+    background: $light-gray
+    border-radius: $base-border-radius
+    text-align: left
+    padding: 0
+    overflow: hidden
+
+    > span > li
+      padding: $small-spacing
+      display: flex
+      align-items: center
+      justify-content: space-between
+      color: $base-font-color
+      overflow: hidden
+      min-height: 2.3em
+
+      &:nth-child(even)
+        background: $light-purple
+
+      &:not(:last-of-type)
+        border-bottom: 1px solid $purple
+
+      ul
+        list-style: none
+
+        li
+          display: inline-block
+          margin-left: $base-spacing
+          color: $dark-gray
+          font-style: italic
+
+    .item-appear
+      opacity: 0.01
+
+    .item-appear.item-appear-active
+      transition()
+      opacity: 1
+
+    .item-enter
+      opacity: 0.01
+
+    .item-enter.item-enter-active
+      transition()
+      opacity: 1
+
+    .item-leave
+      opacity: 1
+
+    .item-leave.item-leave-active
+      transition()
+      opacity: 0.01
+
+
+  footer
+    margin-top: $base-spacing * 2
+
+    p
+      font-size: 1em
+      line-height: 1.3em
